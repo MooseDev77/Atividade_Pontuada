@@ -10,46 +10,49 @@ os. system ("clear")
 
 
 print ("""
-        Duna: 1° livro          Duna: 2° livro
-            R$69,93                 R$57,52
-            16 uni                  13 uni
+     1\t Duna: 1° livro     2\t Duna: 2° livro
+           R$69,93                R$57,52
+            16 uni                 13 uni
+  
 """)
-
-Duna = str(input("Qual livro deseja: ")).lower()
-quantidade = input("Quantas unidades deseja: ")
+   
+Duna = int(input("Qual livro deseja (1 ou 2): "))
+quantidade = int(input("Quantas unidades deseja: "))
 
 match Duna:
 
     case 1:
+        total = quantidade * 69.93
         resultado1 =  quantidade * 69.93 
         resultado2 =  quantidade * 69.93
         resultado3 =  quantidade * 69.93
         if quantidade > 10:
             desconto = (quantidade * 69.93)*0.05
-            print(f"{quantidade} livros Duna: 1° livro vai custar R${resultado1}. ")
-              
+            print(f"\nFinalizando compra: \nproduto:{1} \nquantidade:{quantidade} \npreço:R${69.93} \ntotal:R${total:.2f} \ndesconto:R${desconto:.2f} \ntotal a pagar:R${total - desconto:.2f}")
+           
         if quantidade > 5 or 10:
             desconto = (quantidade * 69.93)*0.03
-            print(f"{quantidade} livros de Duna: 1° livro vai custar R${resultado2}. ")
+            print(f"\nFinalizando compra: \nproduto:{1} \nquantidade:{quantidade} \npreço:R${69.93} \ntotal:R${total:.2f} \ndesconto:R${desconto:.2f} \ntotal a pagar:R${total - desconto:.2f}")
            
         if quantidade <= 5:
             desconto = (quantidade * 69.93)*0.02
-            print(f"{quantidade} livro de Duna: 1° livro vai custar R${resultado3}. ")
+            print(f"\nFinalizando compra: \nproduto:{1} \nquantidade:{quantidade} \npreço:R${69.93} \ntotal:R${total:.2f} \ndesconto:R${desconto:.2f} \ntotal a pagar:R${total - desconto:.2f}")
             
 
-    case duna2:
+    case 2:
+        total2 = quantidade * 57.52
         resultado4 = quantidade * 57.52 
         resultado5 = quantidade * 57.52
         resultado6 = quantidade * 57.52
         if quantidade > 10:
             desconto = (quantidade * 57.52)*0.05
-            print(f"{quantidade} livros Duna: 1° livro vai custar R${resultado4}. ")
+            print(f"\nFinalizando compra: \nproduto:{2} \nquantidade:{quantidade} \npreço:R${57.52} \ntotal:R${total2:.2f} \ndesconto:R${desconto:.2f} \ntotal a pagar:R${total2 - desconto:.2f}")
        
         if quantidade > 5 and 10:
             desconto = (quantidade * 57.52)*0.03
-            print(f"{quantidade} livros de Duna: 1° livro vai custar R${resultado5}. ")
+            print(f"\nFinalizando compra: \nproduto:{2} \nquantidade:{quantidade} \npreço:R${57.52} \ntotal:R${total2:.2f} \ndesconto:R${desconto:.2f} \ntotal a pagar:R${total2 - desconto:.2f}")
        
         if quantidade <= 5:
             desconto = (quantidade * 57.52)*0.02
-            print(f"{quantidade} livro de Duna: 1° livro vai custar R${resultado6}. ")
-       
+            print(f"\nFinalizando compra: \nproduto:{2} \nquantidade:{quantidade} \npreço:R${57.52} \ntotal:R${total2:.2f} \ndesconto:R${desconto:.2f} \ntotal a pagar:R${total2 - desconto:.2f}")
+ 
